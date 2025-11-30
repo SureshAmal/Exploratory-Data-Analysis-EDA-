@@ -53,14 +53,7 @@ Data Alchemy Lab is a production-ready EDA platform that combines traditional st
 - **Intelligent Charting**: Generate customer/product/time/distribution analysis based on question keywords
 - **Token Optimization**: Targeted visual generation reduces API costs
 
-### 📈 Sales Analytics Dashboard
-- **Auto-Detection**: Automatically activates for datasets with Date, Customer, Total_Amount columns
-- **Time Series Analysis**: Daily/monthly/yearly trends with cumulative growth tracking
-- **Customer Intelligence**: Top customers by revenue, transaction counts, average transaction value
-- **Product Performance**: Sales by product, revenue share, trend analysis
-- **KPI Metrics**: Total revenue, transaction count, customer count, daily averages
-
-### 🎨 Professional UI/UX
+### 🎨 Professional UI
 - **Design Token System**: Centralized color, spacing, typography, and motion tokens
 - **Theme Support**: Light (pure white), Dark (deep naval), System preference detection
 - **Narrative Journey**: Sidebar progress tracking (Upload → Profile → Clean → Insights)
