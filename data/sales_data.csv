@@ -1,0 +1,246 @@
+Date,Customer,Product,Region,Sales_Rep,Quantity,Unit_Price,Discount_Percent,Total_Amount
+2023-01-02,Innovate Ltd,Software License,South,Emma Brown,7,6219.51,0,43536.57
+2023-01-03,Zenith Systems,Cloud Storage,West,Bob Smith,3,1474.52,10,3981.21
+2023-01-05,Acme Corp,Consulting Services,North,Alice Johnson,5,9234.18,5,43862.36
+2023-01-07,TechStart Inc,Hardware,East,Carol Davis,2,4128.45,0,8256.90
+2023-01-09,Global Solutions,Training Package,Central,David Wilson,8,2156.78,10,15529.82
+2023-01-12,FutureTech,Support Contract,North,Alice Johnson,4,5234.89,0,20939.56
+2023-01-15,DataDrive Co,Data Analytics Tool,West,Bob Smith,6,7123.45,5,40630.67
+2023-01-18,CloudNine Systems,API Access,South,Emma Brown,10,1823.56,15,15500.26
+2023-01-21,SmartBiz Inc,Custom Development,East,Carol Davis,3,14567.89,0,43703.67
+2023-01-24,NextGen Solutions,Security Suite,Central,David Wilson,5,8945.12,5,42489.32
+2023-01-27,Digital Dynamics,Software License,North,Alice Johnson,4,5678.34,10,20442.02
+2023-01-30,Enterprise Plus,Cloud Storage,West,Bob Smith,7,1345.67,0,9419.69
+2023-02-02,Metro Solutions,Consulting Services,South,Emma Brown,2,9876.54,5,18745.93
+2023-02-05,Apex Industries,Hardware,East,Carol Davis,6,3789.23,10,20481.04
+2023-02-08,Quantum Corp,Training Package,Central,David Wilson,9,2345.78,0,21111.02
+2023-02-11,Zenith Systems,Support Contract,North,Alice Johnson,3,5123.45,15,13064.80
+2023-02-14,Acme Corp,Data Analytics Tool,West,Bob Smith,5,6789.12,5,32248.32
+2023-02-17,TechStart Inc,API Access,South,Emma Brown,8,1567.89,0,12543.12
+2023-02-20,Global Solutions,Custom Development,East,Carol Davis,2,13456.78,10,24222.20
+2023-02-23,Innovate Ltd,Security Suite,Central,David Wilson,7,8234.56,5,54868.96
+2023-02-26,FutureTech,Software License,North,Alice Johnson,4,6123.45,0,24493.80
+2023-03-01,DataDrive Co,Cloud Storage,West,Bob Smith,5,1456.78,10,6555.51
+2023-03-04,CloudNine Systems,Consulting Services,South,Emma Brown,3,9345.67,5,26632.16
+2023-03-07,SmartBiz Inc,Hardware,East,Carol Davis,8,4012.34,0,32098.72
+2023-03-10,NextGen Solutions,Training Package,Central,David Wilson,6,2234.56,15,11396.26
+2023-03-13,Digital Dynamics,Support Contract,North,Alice Johnson,2,5345.67,0,10691.34
+2023-03-16,Enterprise Plus,Data Analytics Tool,West,Bob Smith,9,7012.34,5,59955.19
+2023-03-19,Metro Solutions,API Access,South,Emma Brown,4,1678.90,10,6044.04
+2023-03-22,Apex Industries,Custom Development,East,Carol Davis,5,14123.45,0,70617.25
+2023-03-25,Quantum Corp,Security Suite,Central,David Wilson,3,8456.78,5,24103.13
+2023-03-28,Zenith Systems,Software License,North,Alice Johnson,7,5890.12,10,37184.26
+2023-03-31,Acme Corp,Cloud Storage,West,Bob Smith,6,1345.89,0,8075.34
+2023-04-03,TechStart Inc,Consulting Services,South,Emma Brown,4,9123.45,5,34668.11
+2023-04-06,Global Solutions,Hardware,East,Carol Davis,5,3678.90,15,15635.32
+2023-04-09,Innovate Ltd,Training Package,Central,David Wilson,8,2123.45,0,16987.60
+2023-04-12,FutureTech,Support Contract,North,Alice Johnson,3,5234.56,10,14143.31
+2023-04-15,DataDrive Co,Data Analytics Tool,West,Bob Smith,7,6890.12,5,45778.29
+2023-04-18,CloudNine Systems,API Access,South,Emma Brown,9,1567.34,0,14106.06
+2023-04-21,SmartBiz Inc,Custom Development,East,Carol Davis,2,13789.23,10,24820.61
+2023-04-24,NextGen Solutions,Security Suite,Central,David Wilson,6,8123.45,5,46289.67
+2023-04-27,Digital Dynamics,Software License,North,Alice Johnson,4,6012.34,0,24049.36
+2023-04-30,Enterprise Plus,Cloud Storage,West,Bob Smith,5,1423.67,15,6050.60
+2023-05-03,Metro Solutions,Consulting Services,South,Emma Brown,3,9234.56,5,26316.69
+2023-05-06,Apex Industries,Hardware,East,Carol Davis,7,3890.12,0,27230.84
+2023-05-09,Quantum Corp,Training Package,Central,David Wilson,10,2234.78,10,20113.02
+2023-05-12,Zenith Systems,Support Contract,North,Alice Johnson,4,5123.67,0,20494.68
+2023-05-15,Acme Corp,Data Analytics Tool,West,Bob Smith,6,6789.34,5,38699.24
+2023-05-18,TechStart Inc,API Access,South,Emma Brown,8,1645.78,10,11849.63
+2023-05-21,Global Solutions,Custom Development,East,Carol Davis,3,14012.34,0,42037.02
+2023-05-24,Innovate Ltd,Security Suite,Central,David Wilson,5,8234.67,5,39114.68
+2023-05-27,FutureTech,Software License,North,Alice Johnson,7,5678.90,10,35837.25
+2023-05-30,DataDrive Co,Cloud Storage,West,Bob Smith,4,1390.12,0,5560.48
+2023-06-02,CloudNine Systems,Consulting Services,South,Emma Brown,6,9345.12,5,53247.18
+2023-06-05,SmartBiz Inc,Hardware,East,Carol Davis,5,3712.34,15,15777.45
+2023-06-08,NextGen Solutions,Training Package,Central,David Wilson,9,2156.89,0,19412.01
+2023-06-11,Digital Dynamics,Support Contract,North,Alice Johnson,3,5289.01,10,14280.63
+2023-06-14,Enterprise Plus,Data Analytics Tool,West,Bob Smith,8,6834.56,5,51942.66
+2023-06-17,Metro Solutions,API Access,South,Emma Brown,7,1578.23,0,11047.61
+2023-06-20,Apex Industries,Custom Development,East,Carol Davis,2,13678.45,10,24621.21
+2023-06-23,Quantum Corp,Security Suite,Central,David Wilson,6,8345.67,5,47570.31
+2023-06-26,Zenith Systems,Software License,North,Alice Johnson,4,5923.45,0,23693.80
+2023-06-29,Acme Corp,Cloud Storage,West,Bob Smith,5,1456.12,15,6188.51
+2023-07-02,TechStart Inc,Consulting Services,South,Emma Brown,3,9178.90,5,26159.87
+2023-07-05,Global Solutions,Hardware,East,Carol Davis,8,3845.67,0,30765.36
+2023-07-08,Innovate Ltd,Training Package,Central,David Wilson,6,2189.34,10,11839.04
+2023-07-11,FutureTech,Support Contract,North,Alice Johnson,7,5178.23,0,36247.61
+2023-07-14,DataDrive Co,Data Analytics Tool,West,Bob Smith,4,6923.45,5,26349.11
+2023-07-17,CloudNine Systems,API Access,South,Emma Brown,10,1589.67,10,14307.03
+2023-07-20,SmartBiz Inc,Custom Development,East,Carol Davis,3,14234.56,0,42703.68
+2023-07-23,NextGen Solutions,Security Suite,Central,David Wilson,5,8412.34,5,39958.62
+2023-07-26,Digital Dynamics,Software License,North,Alice Johnson,6,5834.12,10,31544.25
+2023-07-29,Enterprise Plus,Cloud Storage,West,Bob Smith,4,1378.90,0,5515.60
+2023-08-01,Metro Solutions,Consulting Services,South,Emma Brown,7,9289.45,5,61929.92
+2023-08-04,Apex Industries,Hardware,East,Carol Davis,5,3723.56,15,15825.09
+2023-08-07,Quantum Corp,Training Package,Central,David Wilson,8,2245.67,0,17965.36
+2023-08-10,Zenith Systems,Support Contract,North,Alice Johnson,3,5267.89,10,14223.31
+2023-08-13,Acme Corp,Data Analytics Tool,West,Bob Smith,9,6845.23,5,58465.71
+2023-08-16,TechStart Inc,API Access,South,Emma Brown,6,1623.45,0,9740.70
+2023-08-19,Global Solutions,Custom Development,East,Carol Davis,2,13845.67,10,24922.21
+2023-08-22,Innovate Ltd,Security Suite,Central,David Wilson,7,8289.01,5,55308.72
+2023-08-25,FutureTech,Software License,North,Alice Johnson,4,5945.78,0,23783.12
+2023-08-28,DataDrive Co,Cloud Storage,West,Bob Smith,5,1423.56,15,6050.09
+2023-08-31,CloudNine Systems,Consulting Services,South,Emma Brown,3,9234.78,5,26316.74
+2023-09-03,SmartBiz Inc,Hardware,East,Carol Davis,8,3812.45,0,30499.60
+2023-09-06,NextGen Solutions,Training Package,Central,David Wilson,6,2178.90,10,11766.06
+2023-09-09,Digital Dynamics,Support Contract,North,Alice Johnson,4,5234.67,0,20938.68
+2023-09-12,Enterprise Plus,Data Analytics Tool,West,Bob Smith,7,6912.34,5,45995.78
+2023-09-15,Metro Solutions,API Access,South,Emma Brown,10,1578.45,10,14206.05
+2023-09-18,Apex Industries,Custom Development,East,Carol Davis,3,14089.12,0,42267.36
+2023-09-21,Quantum Corp,Security Suite,Central,David Wilson,5,8378.23,5,39796.59
+2023-09-24,Zenith Systems,Software License,North,Alice Johnson,6,5812.34,10,31386.64
+2023-09-27,Acme Corp,Cloud Storage,West,Bob Smith,4,1401.23,0,5604.92
+2023-09-30,TechStart Inc,Consulting Services,South,Emma Brown,7,9312.45,5,62128.10
+2023-10-03,Global Solutions,Hardware,East,Carol Davis,5,3756.89,15,15966.78
+2023-10-06,Innovate Ltd,Training Package,Central,David Wilson,9,2201.34,0,19812.06
+2023-10-09,FutureTech,Support Contract,North,Alice Johnson,3,5289.45,10,14282.02
+2023-10-12,DataDrive Co,Data Analytics Tool,West,Bob Smith,8,6878.12,5,52273.51
+2023-10-15,CloudNine Systems,API Access,South,Emma Brown,6,1589.23,0,9535.38
+2023-10-18,SmartBiz Inc,Custom Development,East,Carol Davis,2,13912.34,10,25042.21
+2023-10-21,NextGen Solutions,Security Suite,Central,David Wilson,7,8312.45,5,55447.40
+2023-10-24,Digital Dynamics,Software License,North,Alice Johnson,4,5878.90,0,23515.60
+2023-10-27,Enterprise Plus,Cloud Storage,West,Bob Smith,5,1445.67,15,6143.60
+2023-10-30,Metro Solutions,Consulting Services,South,Emma Brown,3,9289.12,5,26465.69
+2023-11-02,Apex Industries,Hardware,East,Carol Davis,8,3845.23,0,30761.84
+2023-11-05,Quantum Corp,Training Package,Central,David Wilson,6,2189.45,10,11839.23
+2023-11-08,Zenith Systems,Support Contract,North,Alice Johnson,4,5201.34,0,20805.36
+2023-11-11,Acme Corp,Data Analytics Tool,West,Bob Smith,7,6823.45,5,45434.01
+2023-11-14,TechStart Inc,API Access,South,Emma Brown,10,1601.23,10,14411.07
+2023-11-17,Global Solutions,Custom Development,East,Carol Davis,3,14145.67,0,42437.01
+2023-11-20,Innovate Ltd,Security Suite,Central,David Wilson,5,8367.12,5,39743.82
+2023-11-23,FutureTech,Software License,North,Alice Johnson,6,5890.34,10,31847.84
+2023-11-26,DataDrive Co,Cloud Storage,West,Bob Smith,4,1412.34,0,5649.36
+2023-11-29,CloudNine Systems,Consulting Services,South,Emma Brown,7,9323.56,5,62189.93
+2023-12-02,SmartBiz Inc,Hardware,East,Carol Davis,5,3778.90,15,16060.33
+2023-12-05,NextGen Solutions,Training Package,Central,David Wilson,8,2212.45,0,17699.60
+2023-12-08,Digital Dynamics,Support Contract,North,Alice Johnson,3,5267.23,10,14223.05
+2023-12-11,Enterprise Plus,Data Analytics Tool,West,Bob Smith,9,6889.34,5,58994.74
+2023-12-14,Metro Solutions,API Access,South,Emma Brown,6,1589.67,0,9538.02
+2023-12-17,Apex Industries,Custom Development,East,Carol Davis,2,13834.56,10,24902.21
+2023-12-20,Quantum Corp,Security Suite,Central,David Wilson,7,8323.45,5,55540.99
+2023-12-23,Zenith Systems,Software License,North,Alice Johnson,4,5912.34,0,23649.36
+2023-12-26,Acme Corp,Cloud Storage,West,Bob Smith,5,1434.56,15,6096.88
+2023-12-29,TechStart Inc,Consulting Services,South,Emma Brown,3,9267.89,5,26414.48
+2024-01-01,Global Solutions,Hardware,East,Carol Davis,8,3823.45,0,30587.60
+2024-01-04,Innovate Ltd,Training Package,Central,David Wilson,6,2178.23,10,11742.84
+2024-01-07,FutureTech,Support Contract,North,Alice Johnson,7,5234.56,0,36641.92
+2024-01-10,DataDrive Co,Data Analytics Tool,West,Bob Smith,4,6856.78,5,26055.77
+2024-01-13,CloudNine Systems,API Access,South,Emma Brown,10,1578.90,10,14210.10
+2024-01-16,SmartBiz Inc,Custom Development,East,Carol Davis,3,14078.23,0,42234.69
+2024-01-19,NextGen Solutions,Security Suite,Central,David Wilson,5,8345.12,5,39689.32
+2024-01-22,Digital Dynamics,Software License,North,Alice Johnson,6,5823.67,10,31488.00
+2024-01-25,Enterprise Plus,Cloud Storage,West,Bob Smith,4,1389.45,0,5557.80
+2024-01-28,Metro Solutions,Consulting Services,South,Emma Brown,7,9301.23,5,61983.25
+2024-01-31,Apex Industries,Hardware,East,Carol Davis,5,3734.89,15,15873.28
+2024-02-03,Quantum Corp,Training Package,Central,David Wilson,8,2223.45,0,17787.60
+2024-02-06,Zenith Systems,Support Contract,North,Alice Johnson,3,5278.90,10,14253.11
+2024-02-09,Acme Corp,Data Analytics Tool,West,Bob Smith,9,6834.12,5,58520.33
+2024-02-12,TechStart Inc,API Access,South,Emma Brown,6,1612.34,0,9674.04
+2024-02-15,Global Solutions,Custom Development,East,Carol Davis,2,13889.45,10,25020.51
+2024-02-18,Innovate Ltd,Security Suite,Central,David Wilson,7,8312.78,5,55459.96
+2024-02-21,FutureTech,Software License,North,Alice Johnson,4,5889.67,0,23558.68
+2024-02-24,DataDrive Co,Cloud Storage,West,Bob Smith,5,1423.78,15,6051.06
+2024-02-27,CloudNine Systems,Consulting Services,South,Emma Brown,3,9245.67,5,26340.16
+2024-03-01,SmartBiz Inc,Hardware,East,Carol Davis,8,3812.56,0,30500.48
+2024-03-04,NextGen Solutions,Training Package,Central,David Wilson,6,2189.56,10,11840.42
+2024-03-07,Digital Dynamics,Support Contract,North,Alice Johnson,4,5245.89,0,20983.56
+2024-03-10,Enterprise Plus,Data Analytics Tool,West,Bob Smith,7,6901.45,5,45984.63
+2024-03-13,Metro Solutions,API Access,South,Emma Brown,10,1589.01,10,14301.09
+2024-03-16,Apex Industries,Custom Development,East,Carol Davis,3,14123.67,0,42371.01
+2024-03-19,Quantum Corp,Security Suite,Central,David Wilson,5,8356.89,5,39695.22
+2024-03-22,Zenith Systems,Software License,North,Alice Johnson,6,5834.56,10,31507.44
+2024-03-25,Acme Corp,Cloud Storage,West,Bob Smith,4,1412.89,0,5651.56
+2024-03-28,TechStart Inc,Consulting Services,South,Emma Brown,7,9289.78,5,61928.41
+2024-03-31,Global Solutions,Hardware,East,Carol Davis,5,3767.12,15,15959.76
+2024-04-03,Innovate Ltd,Training Package,Central,David Wilson,9,2201.78,0,19816.02
+2024-04-06,FutureTech,Support Contract,North,Alice Johnson,3,5267.45,10,14221.11
+2024-04-09,DataDrive Co,Data Analytics Tool,West,Bob Smith,8,6867.89,5,52198.96
+2024-04-12,CloudNine Systems,API Access,South,Emma Brown,6,1578.67,0,9472.02
+2024-04-15,SmartBiz Inc,Custom Development,East,Carol Davis,2,13867.23,10,24960.01
+2024-04-18,NextGen Solutions,Security Suite,Central,David Wilson,7,8334.56,5,55595.86
+2024-04-21,Digital Dynamics,Software License,North,Alice Johnson,4,5867.12,0,23468.48
+2024-04-24,Enterprise Plus,Cloud Storage,West,Bob Smith,5,1434.78,15,6097.82
+2024-04-27,Metro Solutions,Consulting Services,South,Emma Brown,3,9278.45,5,26443.60
+2024-04-30,Apex Industries,Hardware,East,Carol Davis,8,3834.67,0,30677.36
+2024-05-03,Quantum Corp,Training Package,Central,David Wilson,6,2189.12,10,11838.85
+2024-05-06,Zenith Systems,Support Contract,North,Alice Johnson,4,5212.34,0,20849.36
+2024-05-09,Acme Corp,Data Analytics Tool,West,Bob Smith,7,6845.67,5,45576.78
+2024-05-12,TechStart Inc,API Access,South,Emma Brown,10,1589.45,10,14305.05
+2024-05-15,Global Solutions,Custom Development,East,Carol Davis,3,14089.34,0,42268.02
+2024-05-18,Innovate Ltd,Security Suite,Central,David Wilson,5,8345.78,5,39692.46
+2024-05-21,FutureTech,Software License,North,Alice Johnson,6,5878.23,10,31743.65
+2024-05-24,DataDrive Co,Cloud Storage,West,Bob Smith,4,1401.45,0,5605.80
+2024-05-27,CloudNine Systems,Consulting Services,South,Emma Brown,7,9312.67,5,62130.45
+2024-05-30,SmartBiz Inc,Hardware,East,Carol Davis,5,3745.89,15,15919.78
+2024-06-02,NextGen Solutions,Training Package,Central,David Wilson,8,2212.56,0,17700.48
+2024-06-05,Digital Dynamics,Support Contract,North,Alice Johnson,3,5278.67,10,14252.51
+2024-06-08,Enterprise Plus,Data Analytics Tool,West,Bob Smith,9,6878.45,5,58894.56
+2024-06-11,Metro Solutions,API Access,South,Emma Brown,6,1601.34,0,9608.04
+2024-06-14,Apex Industries,Custom Development,East,Carol Davis,2,13845.89,10,24923.60
+2024-06-17,Quantum Corp,Security Suite,Central,David Wilson,7,8312.67,5,55449.92
+2024-06-20,Zenith Systems,Software License,North,Alice Johnson,4,5901.23,0,23604.92
+2024-06-23,Acme Corp,Cloud Storage,West,Bob Smith,5,1423.89,15,6051.53
+2024-06-26,TechStart Inc,Consulting Services,South,Emma Brown,3,9256.78,5,26381.84
+2024-06-29,Global Solutions,Hardware,East,Carol Davis,8,3823.67,0,30589.36
+2024-07-02,Innovate Ltd,Training Package,Central,David Wilson,6,2189.78,10,11843.02
+2024-07-05,FutureTech,Support Contract,North,Alice Johnson,7,5245.12,0,36715.84
+2024-07-08,DataDrive Co,Data Analytics Tool,West,Bob Smith,4,6856.23,5,26053.67
+2024-07-11,CloudNine Systems,API Access,South,Emma Brown,10,1589.78,10,14308.02
+2024-07-14,SmartBiz Inc,Custom Development,East,Carol Davis,3,14067.89,0,42203.67
+2024-07-17,NextGen Solutions,Security Suite,Central,David Wilson,5,8367.45,5,39745.39
+2024-07-20,Digital Dynamics,Software License,North,Alice Johnson,6,5845.67,10,31567.64
+2024-07-23,Enterprise Plus,Cloud Storage,West,Bob Smith,4,1389.67,0,5558.68
+2024-07-26,Metro Solutions,Consulting Services,South,Emma Brown,7,9289.56,5,61928.08
+2024-07-29,Apex Industries,Hardware,East,Carol Davis,5,3756.78,15,15966.31
+2024-08-01,Quantum Corp,Training Package,Central,David Wilson,8,2223.67,0,17789.36
+2024-08-04,Zenith Systems,Support Contract,North,Alice Johnson,3,5267.78,10,14222.11
+2024-08-07,Acme Corp,Data Analytics Tool,West,Bob Smith,9,6845.89,5,58591.84
+2024-08-10,TechStart Inc,API Access,South,Emma Brown,6,1589.89,0,9539.34
+2024-08-13,Global Solutions,Custom Development,East,Carol Davis,2,13878.45,10,25021.21
+2024-08-16,Innovate Ltd,Security Suite,Central,David Wilson,7,8323.67,5,55542.43
+2024-08-19,FutureTech,Software License,North,Alice Johnson,4,5878.56,0,23514.24
+2024-08-22,DataDrive Co,Cloud Storage,West,Bob Smith,5,1434.89,15,6098.28
+2024-08-25,CloudNine Systems,Consulting Services,South,Emma Brown,3,9267.34,5,26412.98
+2024-08-28,SmartBiz Inc,Hardware,East,Carol Davis,8,3812.89,0,30503.12
+2024-08-31,NextGen Solutions,Training Package,Central,David Wilson,6,2178.45,10,11741.23
+2024-09-03,Digital Dynamics,Support Contract,North,Alice Johnson,4,5234.78,0,20939.12
+2024-09-06,Enterprise Plus,Data Analytics Tool,West,Bob Smith,7,6889.67,5,45903.84
+2024-09-09,Metro Solutions,API Access,South,Emma Brown,10,1578.34,10,14205.06
+2024-09-12,Apex Industries,Custom Development,East,Carol Davis,3,14089.56,0,42268.68
+2024-09-15,Quantum Corp,Security Suite,Central,David Wilson,5,8345.34,5,39690.37
+2024-09-18,Zenith Systems,Software License,North,Alice Johnson,6,5823.89,10,31489.28
+2024-09-21,Acme Corp,Cloud Storage,West,Bob Smith,4,1401.67,0,5606.68
+2024-09-24,TechStart Inc,Consulting Services,South,Emma Brown,7,9301.45,5,61984.63
+2024-09-27,Global Solutions,Hardware,East,Carol Davis,5,3745.67,15,15918.85
+2024-09-30,Innovate Ltd,Training Package,Central,David Wilson,8,2212.78,0,17702.24
+2024-10-03,FutureTech,Support Contract,North,Alice Johnson,3,5256.89,10,14195.11
+2024-10-06,DataDrive Co,Data Analytics Tool,West,Bob Smith,9,6867.12,5,58843.63
+2024-10-09,CloudNine Systems,API Access,South,Emma Brown,6,1589.56,0,9537.36
+2024-10-12,SmartBiz Inc,Custom Development,East,Carol Davis,2,13856.78,10,24942.20
+2024-10-15,NextGen Solutions,Security Suite,Central,David Wilson,7,8312.89,5,55460.84
+2024-10-18,Digital Dynamics,Software License,North,Alice Johnson,4,5867.45,0,23469.80
+2024-10-21,Enterprise Plus,Cloud Storage,West,Bob Smith,5,1423.45,15,6049.67
+2024-10-24,Metro Solutions,Consulting Services,South,Emma Brown,3,9278.67,5,26444.11
+2024-10-27,Apex Industries,Hardware,East,Carol Davis,8,3823.89,0,30591.12
+2024-10-30,Quantum Corp,Training Package,Central,David Wilson,6,2189.34,10,11839.64
+2024-11-02,Zenith Systems,Support Contract,North,Alice Johnson,4,5223.45,0,20893.80
+2024-11-05,Acme Corp,Data Analytics Tool,West,Bob Smith,7,6834.78,5,45502.42
+2024-11-08,TechStart Inc,API Access,South,Emma Brown,10,1578.90,10,14210.10
+2024-11-11,Global Solutions,Custom Development,East,Carol Davis,3,14123.56,0,42370.68
+2024-11-14,Innovate Ltd,Security Suite,Central,David Wilson,5,8356.67,5,39694.18
+2024-11-17,FutureTech,Software License,North,Alice Johnson,6,5845.89,10,31568.84
+2024-11-20,DataDrive Co,Cloud Storage,West,Bob Smith,4,1412.67,0,5650.68
+2024-11-23,CloudNine Systems,Consulting Services,South,Emma Brown,7,9289.89,5,61929.42
+2024-11-26,SmartBiz Inc,Hardware,East,Carol Davis,5,3756.89,15,15966.78
+2024-11-29,NextGen Solutions,Training Package,Central,David Wilson,8,2223.89,0,17791.12
+2024-12-02,Digital Dynamics,Support Contract,North,Alice Johnson,3,5267.12,10,14221.30
+2024-12-05,Enterprise Plus,Data Analytics Tool,West,Bob Smith,9,6878.67,5,58897.24
+2024-12-08,Metro Solutions,API Access,South,Emma Brown,6,1589.34,0,9536.04
+2024-12-11,Apex Industries,Custom Development,East,Carol Davis,2,13867.45,10,24961.41
+2024-12-14,Quantum Corp,Security Suite,Central,David Wilson,7,8323.89,5,55544.47
+2024-12-17,Zenith Systems,Software License,North,Alice Johnson,4,5889.90,0,23559.60
+2024-12-20,Acme Corp,Cloud Storage,West,Bob Smith,5,1434.67,15,6097.35
+2024-12-23,TechStart Inc,Consulting Services,South,Emma Brown,3,9267.56,5,26413.60
+2024-12-26,Global Solutions,Hardware,East,Carol Davis,8,3834.89,0,30679.12
+2024-12-29,Innovate Ltd,Training Package,Central,David Wilson,6,2189.67,10,11841.42

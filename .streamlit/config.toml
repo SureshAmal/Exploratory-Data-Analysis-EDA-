@@ -1,0 +1,16 @@
+[theme]
+# Force light theme only - disable dark mode completely
+base = "light"
+primaryColor = "#3498db"
+backgroundColor = "#f8f9fa"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#2c3e50"
+font = "sans serif"
+
+[client]
+# Prevent users from switching to dark theme
+showErrorDetails = true
+
+[browser]
+# Gather usage stats
+gatherUsageStats = false

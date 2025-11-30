@@ -1,0 +1,6 @@
+/* Dark Theme Specific Component Tweaks */
+body.theme-dark .page-header { background: linear-gradient(120deg, rgba(var(--color-accent-rgb),0.85) 0%, var(--color-accent-alt) 95%); }
+body.theme-dark .stTabs [data-baseweb="tab-list"] { background: var(--color-surface); }
+body.theme-dark .stDataFrame, body.theme-dark .stTable { background: var(--color-surface); }
+body.theme-dark [data-testid="stFileUploader"] { background: var(--color-surface-alt); }
+body.theme-dark .insights-preface { background: linear-gradient(90deg, rgba(var(--color-accent-rgb),0.35), transparent); }
