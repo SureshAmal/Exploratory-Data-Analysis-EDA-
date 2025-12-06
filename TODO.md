@@ -1,4 +1,6 @@
-- [x] TODO: Fix the Card above extra IsMarkdown boxes and Styles of Card
-- [x] TODO: Add tabs switching
-- [x] TODO: table dataframe overflowing
-- [x] Seperate into different UI component
+- [x] Fix the Card above extra IsMarkdown boxes and Styles of Card
+- [x] Added tabs switching
+- [x] Table dataframe overflowing fixes
+- [x] Seperated into different UI component
+- [x] Cleaned UI of Cleaning tab
+- [x] Clean UI of AI insight
