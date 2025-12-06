@@ -54,7 +54,8 @@ ehavior from custom HTML blocks */ .element-container:has(.page-header),
   background: linear-gradient(120deg, rgba(var(--color-accent-rgb), 0.92) 0%, var(--color-accent-alt) 92%);
   padding: var(--space-6);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  /* NOTE: REMOVED HEADER SHADOW */
+  /* box-shadow: var(--shadow-lg); */
   position: relative;
   overflow: visible !important;
 }

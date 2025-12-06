@@ -11,16 +11,39 @@ def render_profile(df):
 
     profile_col1, profile_col2, profile_col3, profile_col4 = st.columns(4)
 
-    with profile_col1:
-        st.metric("Total Rows", f"{profile['rows']:,}")
-    with profile_col2:
-        st.metric("Total Columns", f"{profile['columns']:,}")
-    with profile_col3:
-        total_missing = sum(profile["missing"].values())
-        st.metric("Missing Values", f"{total_missing:,}")
-    with profile_col4:
-        memory_mb = df.memory_usage(deep=True).sum() / (1024 * 1024)
-        st.metric("Memory Usage", f"{memory_mb:.2f} MB")
+    # NOTE: Use streamlit metrics: https://docs.streamlit.io/develop/api-reference/data/st.metric
+
+    total_missing = sum(profile["missing"].values())
+    memory_mb = df.memory_usage(deep=True).sum() / (1024 * 1024)
+    profile_col1.metric("Total Rows", f"{profile['rows']:,}", "")
+    profile_col2.metric("Total Columns", f"{profile['columns']:,}", "")
+    profile_col3.metric("Missing Values", f"{total_missing:,}", "")
+    profile_col4.metric("Memory Usage", f"{memory_mb:.2f} MB", "")
+
+    # with profile_col1:
+    #     st.metric("Total Rows", f"{profile['rows']:,}")
+    # with profile_col2:
+    #     st.metric("Total Columns", f"{profile['columns']:,}")
+    # with profile_col3:
+    #     total_missing = sum(profile["missing"].values())
+    #     st.metric("Missing Values", f"{total_missing:,}")
+    # with profile_col4:
+    #     memory_mb = df.memory_usage(deep=True).sum() / (1024 * 1024)
+    #     st.metric("Memory Usage", f"{memory_mb:.2f} MB")
 
     st.markdown("### Column Profile")
-    st.dataframe(column_profile(df), width="stretch")
+    column_prof = column_profile(df)
+    if "sample_values" in column_prof:
+        st.dataframe(
+            column_prof,
+            column_config={
+                "sample_values": st.column_config.ListColumn(
+                    "sample values",
+                    help="file column sample values",
+                    width="medium",
+                ),
+            },
+            hide_index=True,
+        )
+    else:
+        st.dataframe(column_profile(df), width="stretch")

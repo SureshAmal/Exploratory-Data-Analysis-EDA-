@@ -20,24 +20,24 @@ load_dotenv()
 # override server config with empty strings, causing front-end "Invalid color"
 # warnings. This script removes localStorage keys that mention "theme" and
 # reloads the page once so the server-provided config applies.
-components.html(
-    """
-        <script>
-        (function(){
-            try {
-                const keys = Object.keys(localStorage || {});
-                const themeKeys = keys.filter(k => /theme/i.test(k) || k.includes('streamlit'));
-                if (themeKeys.length) {
-                    themeKeys.forEach(k => localStorage.removeItem(k));
-                    // reload once to apply server config
-                    window.location.reload();
-                }
-            } catch(e) { console.error('theme-clear', e); }
-        })();
-        </script>
-        """,
-    height=0,
-)
+# components.html(
+#     """
+#         <script>
+#         (function(){
+#             try {
+#                 const keys = Object.keys(localStorage || {});
+#                 const themeKeys = keys.filter(k => /theme/i.test(k) || k.includes('streamlit'));
+#                 if (themeKeys.length) {
+#                     themeKeys.forEach(k => localStorage.removeItem(k));
+#                     // reload once to apply server config
+#                     window.location.reload();
+#                 }
+#             } catch(e) { console.error('theme-clear', e); }
+#         })();
+#         </script>
+#         """,
+#     height=0,
+# )
 
 st.set_page_config(
     page_title="Data Alchemy Lab",

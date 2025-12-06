@@ -18,3 +18,4 @@ def inject_modular_css():
                 st.html(f"<style>{f.read()}</style>")
         except FileNotFoundError:
             st.warning(f"Missing CSS file: {path}")
+

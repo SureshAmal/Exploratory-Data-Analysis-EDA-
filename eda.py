@@ -26,7 +26,7 @@ def _try_excel_bytes(bio, engines):
 def _try_csv(source, low_memory=True):
     encodings = ["utf-8", "utf-8-sig", "cp1252", "latin1", "iso-8859-1"]
     last_err = None
-    
+
     # Debug: check file size
     file_size = 0
     if isinstance(source, (str, os.PathLike)):
@@ -36,15 +36,19 @@ def _try_csv(source, low_memory=True):
                 raise ValueError("File is empty (0 bytes)")
         except Exception as e:
             pass
-    
+
     for enc in encodings:
         try:
             if isinstance(source, (str, os.PathLike)):
-                df = pd.read_csv(source, encoding=enc, low_memory=low_memory, on_bad_lines='skip')
+                df = pd.read_csv(
+                    source, encoding=enc, low_memory=low_memory, on_bad_lines="skip"
+                )
             else:
                 source.seek(0)
-                df = pd.read_csv(source, encoding=enc, low_memory=low_memory, on_bad_lines='skip')
-            
+                df = pd.read_csv(
+                    source, encoding=enc, low_memory=low_memory, on_bad_lines="skip"
+                )
+
             # Check if DataFrame is valid
             if df is not None and len(df.columns) > 0:
                 return df
@@ -53,22 +57,34 @@ def _try_csv(source, low_memory=True):
         except Exception as e:
             last_err = e
             continue
-    
+
     # If all encodings fail, try with different delimiters
     for enc in ["utf-8", "cp1252", "latin1"]:
-        for delimiter in [',', ';', '\t', '|']:
+        for delimiter in [",", ";", "\t", "|"]:
             try:
                 if isinstance(source, (str, os.PathLike)):
-                    df = pd.read_csv(source, encoding=enc, delimiter=delimiter, low_memory=low_memory, on_bad_lines='skip')
+                    df = pd.read_csv(
+                        source,
+                        encoding=enc,
+                        delimiter=delimiter,
+                        low_memory=low_memory,
+                        on_bad_lines="skip",
+                    )
                 else:
                     source.seek(0)
-                    df = pd.read_csv(source, encoding=enc, delimiter=delimiter, low_memory=low_memory, on_bad_lines='skip')
-                
+                    df = pd.read_csv(
+                        source,
+                        encoding=enc,
+                        delimiter=delimiter,
+                        low_memory=low_memory,
+                        on_bad_lines="skip",
+                    )
+
                 if df is not None and len(df.columns) > 0:
                     return df
             except Exception:
                 continue
-    
+
     raise ValueError(
         f"Failed to read CSV. File size: {file_size} bytes. Last error: {last_err}. "
         "Please check if the file contains valid data and is not empty."
@@ -88,12 +104,16 @@ def _read_path(path: str) -> pd.DataFrame:
         try:
             return pd.read_excel(path, engine="xlrd")
         except Exception:
-            raise ValueError("Failed to read .xls file. Install 'xlrd==1.2.0' or convert to CSV.")
+            raise ValueError(
+                "Failed to read .xls file. Install 'xlrd==1.2.0' or convert to CSV."
+            )
     if lower.endswith(".xlsb"):
         try:
             return pd.read_excel(path, engine="pyxlsb")
         except Exception:
-            raise ValueError("Failed to read .xlsb file. Install 'pyxlsb' or convert to CSV.")
+            raise ValueError(
+                "Failed to read .xlsb file. Install 'pyxlsb' or convert to CSV."
+            )
     # fallback
     try:
         return _try_csv(path, low_memory=False)
@@ -158,17 +178,23 @@ def read_dataset(uploaded_file) -> pd.DataFrame:
             df = _try_excel_bytes(bio, engines=["openpyxl"])
             if df is not None:
                 return df
-            raise ValueError("Failed to read .xlsx file. Ensure 'openpyxl' is installed (pip install openpyxl).")
+            raise ValueError(
+                "Failed to read .xlsx file. Ensure 'openpyxl' is installed (pip install openpyxl)."
+            )
         if lower.endswith(".xls"):
             df = _try_excel_bytes(bio, engines=["xlrd"])
             if df is not None:
                 return df
-            raise ValueError("Failed to read .xls file. Install 'xlrd==1.2.0' or convert the file to .xlsx/CSV.")
+            raise ValueError(
+                "Failed to read .xls file. Install 'xlrd==1.2.0' or convert the file to .xlsx/CSV."
+            )
         if lower.endswith(".xlsb"):
             df = _try_excel_bytes(bio, engines=["pyxlsb"])
             if df is not None:
                 return df
-            raise ValueError("Failed to read .xlsb file. Install 'pyxlsb' or convert the file to .xlsx/CSV.")
+            raise ValueError(
+                "Failed to read .xlsb file. Install 'pyxlsb' or convert the file to .xlsx/CSV."
+            )
 
         # Unknown extension: try CSV then Excel
         bio.seek(0)
@@ -229,7 +255,7 @@ def column_profile(df: pd.DataFrame) -> pd.DataFrame:
         unique_count = len(uniques)
         # Sample values (convert to string, limit length for very long entries)
         sample_vals = []
-        for v in uniques[:3]:
+        for v in uniques[:10]:
             sv = str(v)
             if len(sv) > 30:
                 sv = sv[:27] + "…"
@@ -240,27 +266,31 @@ def column_profile(df: pd.DataFrame) -> pd.DataFrame:
             numeric_min = f"{series.min():.2f}" if not pd.isna(series.min()) else ""
             numeric_max = f"{series.max():.2f}" if not pd.isna(series.max()) else ""
             numeric_mean = f"{series.mean():.2f}" if not pd.isna(series.mean()) else ""
-            numeric_median = f"{series.median():.2f}" if not pd.isna(series.median()) else ""
+            numeric_median = (
+                f"{series.median():.2f}" if not pd.isna(series.median()) else ""
+            )
         else:
             numeric_min = ""
             numeric_max = ""
             numeric_mean = ""
             numeric_median = ""
         memory_bytes = series.memory_usage(deep=True)
-        rows.append({
-            "column": col,
-            "dtype": str(series.dtype),
-            "non_null": int(non_null),
-            "missing": int(missing),
-            "missing_pct": round(missing_pct, 2),
-            "unique": int(unique_count),
-            "sample_values": sample_values,
-            "min": numeric_min,
-            "max": numeric_max,
-            "mean": numeric_mean,
-            "median": numeric_median,
-            "memory_bytes": int(memory_bytes),
-        })
+        rows.append(
+            {
+                "column": col,
+                "dtype": str(series.dtype),
+                "non_null": int(non_null),
+                "missing": int(missing),
+                "missing_pct": round(missing_pct, 2),
+                "unique": int(unique_count),
+                "sample_values": sample_values,
+                "min": numeric_min,
+                "max": numeric_max,
+                "mean": numeric_mean,
+                "median": numeric_median,
+                "memory_bytes": int(memory_bytes),
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -295,7 +325,13 @@ def outlier_summary(df: pd.DataFrame, method: str = "iqr", **kwargs) -> pd.DataF
     rows = []
     for col in df.columns:
         mask = fn(df[col], **kwargs)
-        rows.append({"column": col, "outlier_count": int(mask.sum()), "outlier_pct": float(mask.mean())})
+        rows.append(
+            {
+                "column": col,
+                "outlier_count": int(mask.sum()),
+                "outlier_pct": float(mask.mean()),
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -324,9 +360,13 @@ def apply_cleaning(df: pd.DataFrame, actions: Dict) -> pd.DataFrame:
             lower = act.get("lower")
             upper = act.get("upper")
             if lower is not None:
-                result[col_name] = np.where(result[col_name] < lower, lower, result[col_name])
+                result[col_name] = np.where(
+                    result[col_name] < lower, lower, result[col_name]
+                )
             if upper is not None:
-                result[col_name] = np.where(result[col_name] > upper, upper, result[col_name])
+                result[col_name] = np.where(
+                    result[col_name] > upper, upper, result[col_name]
+                )
         elif method == "impute":
             strategy = act.get("impute", "median")
             if strategy == "mean":
@@ -334,7 +374,11 @@ def apply_cleaning(df: pd.DataFrame, actions: Dict) -> pd.DataFrame:
             elif strategy == "median":
                 val = result[col_name].median()
             else:
-                val = result[col_name].mode().iloc[0] if not result[col_name].mode().empty else np.nan
+                val = (
+                    result[col_name].mode().iloc[0]
+                    if not result[col_name].mode().empty
+                    else np.nan
+                )
             result[col_name] = result[col_name].fillna(val)
 
     for col, act in actions.items():
@@ -346,5 +390,3 @@ def apply_cleaning(df: pd.DataFrame, actions: Dict) -> pd.DataFrame:
             _apply_single(col, act)
 
     return result
-
-
