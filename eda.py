@@ -359,27 +359,36 @@ def apply_cleaning(df: pd.DataFrame, actions: Dict) -> pd.DataFrame:
         elif method == "cap":
             lower = act.get("lower")
             upper = act.get("upper")
-            if lower is not None:
-                result[col_name] = np.where(
-                    result[col_name] < lower, lower, result[col_name]
-                )
-            if upper is not None:
-                result[col_name] = np.where(
-                    result[col_name] > upper, upper, result[col_name]
-                )
+            # Only apply numeric capping — safely coerce to numeric first.
+            series = result[col_name]
+            numeric = pd.to_numeric(series, errors="coerce")
+            if lower is not None and numeric.notna().any():
+                # Use numeric mask to determine where to cap, preserve original values where non-numeric
+                mask_lower = numeric < lower
+                result.loc[mask_lower, col_name] = lower
+            if upper is not None and numeric.notna().any():
+                mask_upper = numeric > upper
+                result.loc[mask_upper, col_name] = upper
         elif method == "impute":
             strategy = act.get("impute", "median")
+            series = result[col_name]
+            # Try numeric aggregation first; if not possible, fallback to mode
             if strategy == "mean":
-                val = result[col_name].mean()
+                numeric = pd.to_numeric(series, errors="coerce")
+                if numeric.dropna().empty:
+                    val = series.mode().iloc[0] if not series.mode().empty else np.nan
+                else:
+                    val = numeric.mean()
             elif strategy == "median":
-                val = result[col_name].median()
+                numeric = pd.to_numeric(series, errors="coerce")
+                if numeric.dropna().empty:
+                    val = series.mode().iloc[0] if not series.mode().empty else np.nan
+                else:
+                    val = numeric.median()
             else:
-                val = (
-                    result[col_name].mode().iloc[0]
-                    if not result[col_name].mode().empty
-                    else np.nan
-                )
-            result[col_name] = result[col_name].fillna(val)
+                val = series.mode().iloc[0] if not series.mode().empty else np.nan
+
+            result[col_name] = series.fillna(val)
 
     for col, act in actions.items():
         # Support either a single dict or a list of action dicts per column

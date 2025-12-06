@@ -51,7 +51,7 @@ def render_sales(
             template=BRAND_TEMPLATE,
         )
         fig_daily.update_traces(line_color="#1f77b4", line_width=2, fill="tozeroy")
-        col1.plotly_chart(fig_daily, use_container_width=True)
+        col1.plotly_chart(fig_daily, width='stretch')
 
         monthly_sales = (
             df_sales.groupby("Month_Year")["Total_Amount"].sum().reset_index()
@@ -66,7 +66,7 @@ def render_sales(
             color_continuous_scale="Viridis",
             template=BRAND_TEMPLATE,
         )
-        col1.plotly_chart(fig_monthly, use_container_width=True)
+        col1.plotly_chart(fig_monthly, width='stretch')
 
         # Right column charts
         daily_sales["Cumulative_Sales"] = daily_sales["Total_Amount"].cumsum()
@@ -78,7 +78,7 @@ def render_sales(
             labels={"Cumulative_Sales": "Cumulative Sales ($)", "Date": "Date"},
             template=BRAND_TEMPLATE,
         )
-        col2.plotly_chart(fig_cumulative, use_container_width=True)
+        col2.plotly_chart(fig_cumulative, width='stretch')
 
         yearly_sales = df_sales.groupby("Year")["Total_Amount"].sum().reset_index()
         fig_yearly = px.bar(
@@ -93,7 +93,7 @@ def render_sales(
             template=BRAND_TEMPLATE,
         )
         fig_yearly.update_traces(texttemplate="$%{text:.2s}", textposition="outside")
-        col2.plotly_chart(fig_yearly, use_container_width=True)
+        col2.plotly_chart(fig_yearly, width='stretch')
 
     # Sales by Customer
     elif selected == "Sales by Customer":
@@ -132,7 +132,7 @@ def render_sales(
         )
         fig_customers.update_traces(texttemplate="$%{text:.2s}", textposition="outside")
         fig_customers.update_layout(xaxis_tickangle=-45)
-        col1.plotly_chart(fig_customers, use_container_width=True)
+        col1.plotly_chart(fig_customers, width='stretch')
 
         fig_pie = px.pie(
             top_customers,
@@ -142,7 +142,7 @@ def render_sales(
             hole=0.4,
             template=BRAND_TEMPLATE,
         )
-        col2.plotly_chart(fig_pie, use_container_width=True)
+        col2.plotly_chart(fig_pie, width='stretch')
 
         s.markdown("<br>", unsafe_allow_html=True)
         s.markdown("### Customer Statistics Table")
@@ -154,7 +154,7 @@ def render_sales(
                     "Transaction_Count": "{:.0f}",
                 }
             ),
-            use_container_width=True,
+            width='stretch',
         )
 
     # Product Analysis
@@ -178,7 +178,7 @@ def render_sales(
                 template=BRAND_TEMPLATE,
             )
             fig_products.update_layout(xaxis_tickangle=-45)
-            col1.plotly_chart(fig_products, use_container_width=True)
+            col1.plotly_chart(fig_products, width='stretch')
 
             if "Quantity" in df_sales.columns:
                 product_qty = (
@@ -196,7 +196,7 @@ def render_sales(
                     template=BRAND_TEMPLATE,
                 )
                 fig_qty.update_layout(xaxis_tickangle=-45)
-                col1.plotly_chart(fig_qty, use_container_width=True)
+                col1.plotly_chart(fig_qty, width='stretch')
 
             fig_product_pie = px.pie(
                 product_sales.head(10),
@@ -206,7 +206,7 @@ def render_sales(
                 hole=0.3,
                 template=BRAND_TEMPLATE,
             )
-            col2.plotly_chart(fig_product_pie, use_container_width=True)
+            col2.plotly_chart(fig_product_pie, width='stretch')
 
             product_timeline = (
                 df_sales.groupby(["Month_Year", "Product"])["Total_Amount"]
@@ -226,7 +226,7 @@ def render_sales(
                 labels={"Total_Amount": "Sales ($)", "Month_Year": "Month"},
                 template=BRAND_TEMPLATE,
             )
-            col2.plotly_chart(fig_product_trend, use_container_width=True)
+            col2.plotly_chart(fig_product_trend, width='stretch')
         else:
             s.info("Product column not found in the dataset.")
 
@@ -310,6 +310,6 @@ def render_sales(
                 color_continuous_scale="Blues",
                 template=BRAND_TEMPLATE,
             )
-            col2.plotly_chart(fig_region, use_container_width=True)
+            col2.plotly_chart(fig_region, width='stretch')
         else:
             col2.info("Regional data not available")
