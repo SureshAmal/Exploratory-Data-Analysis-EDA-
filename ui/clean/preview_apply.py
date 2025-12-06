@@ -1,22 +1,3 @@
-"""
-Preview & Apply UI component for data cleaning.
-
-Provides:
-- Generate preview of configured cleaning actions (batch drop mask + per-column actions)
-- Impact metrics (rows removed, missing values delta)
-- Cleaned data preview and detailed missing-value comparison
-- Download cleaned CSV
-- Apply changes to session_state to persist cleaned dataset
-
-This component expects the following keys to be present in st.session_state (created by other cleaning components):
-- "auto_drop_mask" (pd.Series boolean mask or None)
-- "individual_actions" (dict mapping column -> list of action dicts)
-- Optional: "cleaned_df" (preview result) will be written here after preview runs.
-
-Function:
-- render_preview_apply(df: pd.DataFrame) -> None
-"""
-
 from typing import Optional
 
 import pandas as pd
@@ -63,7 +44,7 @@ def render_preview_apply(df: pd.DataFrame) -> None:
         preview_button = st.button(
             "Generate Preview",
             type="primary",
-            use_container_width=True,
+            width="stretch",
             key="preview_button",
             help="Run the configured cleaning steps on a copy of your data and generate the report below.",
         )
@@ -167,7 +148,7 @@ def render_preview_apply(df: pd.DataFrame) -> None:
         try:
             st.dataframe(
                 st.session_state["cleaned_df"].head(100),
-                use_container_width=True,
+                width="stretch",
                 height=400,
             )
         except Exception:
@@ -206,7 +187,7 @@ def render_preview_apply(df: pd.DataFrame) -> None:
             (comparison_df["Missing Before"] > 0) | (comparison_df["Missing After"] > 0)
         ]
         if not filtered.empty:
-            st.dataframe(filtered, use_container_width=True)
+            st.dataframe(filtered, width="stretch")
         else:
             st.info(
                 "No missing values were present in the dataset before or after cleaning."
@@ -226,7 +207,7 @@ def render_preview_apply(df: pd.DataFrame) -> None:
                     data=csv,
                     file_name="cleaned_data.csv",
                     mime="text/csv",
-                    use_container_width=True,
+                    width="stretch",
                     key="download_cleaned_csv",
                     help="Download the cleaned dataset as a CSV file.",
                 )

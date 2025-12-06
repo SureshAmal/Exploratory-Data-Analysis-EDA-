@@ -1,11 +1,10 @@
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
 import streamlit.components.v1 as components
-
-from eda import read_dataset
+from dotenv import load_dotenv
 
 from agents import SupervisorAgent
+from eda import read_dataset
 from memory import SessionMemory
 
 # Modular UI components
@@ -225,12 +224,12 @@ else:
         - Statistical profiling
         - Distribution analysis
         - Correlation matrices
-        
+
         **Data Quality**
         - Outlier detection (IQR, Z-score)
         - Missing value handling
         - Data cleaning tools
-        
+
         **Specialized Features**
         - Sales analytics dashboard
         - AI-powered insights

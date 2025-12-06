@@ -20,17 +20,6 @@ def render_profile(df):
     profile_col3.metric("Missing Values", f"{total_missing:,}", "")
     profile_col4.metric("Memory Usage", f"{memory_mb:.2f} MB", "")
 
-    # with profile_col1:
-    #     st.metric("Total Rows", f"{profile['rows']:,}")
-    # with profile_col2:
-    #     st.metric("Total Columns", f"{profile['columns']:,}")
-    # with profile_col3:
-    #     total_missing = sum(profile["missing"].values())
-    #     st.metric("Missing Values", f"{total_missing:,}")
-    # with profile_col4:
-    #     memory_mb = df.memory_usage(deep=True).sum() / (1024 * 1024)
-    #     st.metric("Memory Usage", f"{memory_mb:.2f} MB")
-
     st.markdown("### Column Profile")
     column_prof = column_profile(df)
     if "sample_values" in column_prof:

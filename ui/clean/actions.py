@@ -62,7 +62,7 @@ def render_cleaning_actions(df: pd.DataFrame) -> None:
     with col1:
         if st.button(
             "Toggle Select All/None",
-            use_container_width=False,
+            width="content",
             key="toggle_select",
             help="Click to instantly select or deselect all columns in the list below.",
         ):
@@ -111,7 +111,7 @@ def render_cleaning_actions(df: pd.DataFrame) -> None:
         if st.button(
             "Generate Batch Drop Mask",
             type="primary",
-            use_container_width=False,
+            width="content",
             help="Calculates outliers based on your Step 1 settings and flags those rows for removal.",
         ):
             mask_any = pd.Series(False, index=df.index)

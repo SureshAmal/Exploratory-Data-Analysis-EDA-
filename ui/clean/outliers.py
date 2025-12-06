@@ -77,7 +77,7 @@ def render_outlier_detection(df: pd.DataFrame) -> None:
         st.markdown("#### Outlier Summary by Column")
         # If summary is empty or not a DataFrame, handle gracefully
         if isinstance(summary, pd.DataFrame) and not summary.empty:
-            st.dataframe(summary, use_container_width=True)
+            st.dataframe(summary, width="stretch")
         else:
             # Create a helpful empty message / placeholder
             st.write(

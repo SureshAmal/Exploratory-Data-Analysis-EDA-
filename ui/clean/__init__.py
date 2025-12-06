@@ -1,18 +1,3 @@
-"""
-Cleaning UI package
-
-This module re-exports the split cleaning UI components and provides a single
-`render_cleaning(df)` entrypoint which composes the three tabs:
-
-- Outlier Detection
-- Cleaning Actions
-- Preview & Apply
-
-Each tab is implemented in its own module so they can be developed and tested
-independently, while this package keeps the public API consistent with the
-previous single-file implementation.
-"""
-
 from typing import Any
 
 import pandas as pd
@@ -30,13 +15,7 @@ __all__ = [
 ]
 
 
-def render_cleaning(df: pd.DataFrame) -> None:
-    """Top-level rendering function for the Cleaning tab.
-
-    Creates three Streamlit tabs and delegates rendering to the component modules.
-    Keep this function stable so other parts of the app can import and use it
-    exactly like before.
-    """
+def render_clean(df: pd.DataFrame) -> None:
     st.markdown("## Data Cleaning & Transformation")
     st.markdown(
         "Detect and handle outliers, missing values, and transform your data with confidence."
