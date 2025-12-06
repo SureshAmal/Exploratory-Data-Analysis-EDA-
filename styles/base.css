@@ -140,30 +140,28 @@ div {
 }
 
 /* DataFrame global settings - allow horizontal scroll to show all columns */
-[data-testid="stDataFrame"],
-.stDataFrame {
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: visible !important;
-}
+/* [data-testid="stDataFrame"], */
+/* .stDataFrame { */
+/*   max-width: 100% !important; */
+/* } */
 
-[data-testid="stDataFrame"]>div,
-.stDataFrame>div {
-  max-width: none !important;
-  overflow-x: auto !important;
-  overflow-y: visible !important;
-}
+/* [data-testid="stDataFrame"]>div, */
+/* .stDataFrame>div { */
+/*   max-width: none !important; */
+/*   overflow-x: auto !important; */
+/*   overflow-y: visible !important; */
+/* } */
 
-overflow-x: visible !important;
-overflow-y: visible !important;
-}
+/* overflow-x: visible !important; */
+/* overflow-y: visible !important; */
+/* } */
 
-[data-testid="stDataFrame"]>div,
-.stDataFrame>div {
-  max-width: 100% !important;
-  overflow-x: visible !important;
-  overflow-y: visible !important;
-}
+/* [data-testid="stDataFrame"]>div, */
+/* .stDataFrame>div { */
+/*   max-width: 100% !important; */
+/*   overflow-x: visible !important; */
+/*   overflow-y: visible !important; */
+/* } */
 
 /* Text muted */
 .text-muted {

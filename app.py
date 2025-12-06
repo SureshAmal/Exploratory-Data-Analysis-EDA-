@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
+import streamlit.components.v1 as components
 
 from eda import read_dataset
 
@@ -13,6 +14,30 @@ from ui.header import render_header
 from ui.sidebar import render_sidebar
 
 load_dotenv()
+
+# Clear any client-side theme overrides stored in browser localStorage.
+# Some Streamlit theme editor settings are persisted client-side and can
+# override server config with empty strings, causing front-end "Invalid color"
+# warnings. This script removes localStorage keys that mention "theme" and
+# reloads the page once so the server-provided config applies.
+components.html(
+    """
+        <script>
+        (function(){
+            try {
+                const keys = Object.keys(localStorage || {});
+                const themeKeys = keys.filter(k => /theme/i.test(k) || k.includes('streamlit'));
+                if (themeKeys.length) {
+                    themeKeys.forEach(k => localStorage.removeItem(k));
+                    // reload once to apply server config
+                    window.location.reload();
+                }
+            } catch(e) { console.error('theme-clear', e); }
+        })();
+        </script>
+        """,
+    height=0,
+)
 
 st.set_page_config(
     page_title="Data Alchemy Lab",
@@ -156,6 +181,19 @@ if uploaded is not None or loaded_from_history is not None:
 
 else:
     # Welcome screen - clean and simple
+    # Theme diagnostics: show effective theme keys to help debug empty-color warnings
+    # try:
+    #     with st.sidebar.expander("Theme diagnostics", expanded=False):
+    #         try:
+    #             theme = st.get_option("theme")
+    #         except Exception:
+    #             theme = None
+    #         st.write("Effective theme (st.get_option('theme')):")
+    #         st.write(theme)
+    # except Exception:
+    #     # Guard: if Streamlit version doesn't support get_option, skip diagnostics
+    #     pass
+
     st.markdown(
         '<div style="font-size: var(--fs-xl); font-family: var(--font-serif); font-weight: 600; margin-top: var(--space-6); margin-bottom: var(--space-3);">Welcome to Data Analysis Platform</div><hr>',
         unsafe_allow_html=True,

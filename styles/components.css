@@ -211,45 +211,43 @@ a,
 }
 
 /* DataFrame wrapper - allow full width display */
-.stDataFrame,
-.stTable {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  padding: var(--space-3) var(--space-3) var(--space-2);
-  max-width: 100% !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  overflow-x: auto !important;
-  overflow-y: visible !important;
-}
+/* .stDataFrame, */
+/* .stTable { */
+/*   background: var(--color-surface); */
+/*   border: 1px solid var(--color-border); */
+/*   border-radius: var(--radius-md); */
+/*   box-shadow: var(--shadow-sm); */
+/*   padding: var(--space-3) var(--space-3) var(--space-2); */
+/*   max-width: 100% !important; */
+/*   width: 100% !important; */
+/*   box-sizing: border-box !important; */
+/*   overflow-x: auto !important; */
+/*   overflow-y: visible !important; */
+/* } */
 
 /* DataFrame container - allow horizontal scroll for full data */
-[data-testid="stDataFrame"] {
-  max-width: 100% !important;
-  width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: visible !important;
-  box-sizing: border-box !important;
-}
+/* [data-testid="stDataFrame"] { */
+/*   max-width: 100% !important; */
+/*   width: 100% !important; */
+/*   box-sizing: border-box !important; */
+/* } */
 
-[data-testid="stDataFrame"]>div {
-  max-width: none !important;
-  width: auto !important;
-  min-width: 100% !important;
-  box-sizing: border-box !important;
-  overflow-x: auto !important;
-}
+/* [data-testid="stDataFrame"]>div { */
+/*   max-width: none !important; */
+/*   width: auto !important; */
+/*   min-width: 100% !important; */
+/*   box-sizing: border-box !important; */
+/*   overflow-x: auto !important; */
+/* } */
 
 /* DataFrame internal wrapper - allow full content width */
-[data-testid="stDataFrame"] iframe,
-[data-testid="stDataFrame"]>div>div {
-  max-width: none !important;
-  width: auto !important;
-  min-width: 100% !important;
-  box-sizing: border-box !important;
-}
+/* [data-testid="stDataFrame"] iframe, */
+/* [data-testid="stDataFrame"]>div>div { */
+/*   max-width: none !important; */
+/*   width: auto !important; */
+/*   min-width: 100% !important; */
+/*   box-sizing: border-box !important; */
+/* } */
 
 /* Expanders */
 [data-testid="stExpander"] {
@@ -266,14 +264,15 @@ a,
   font-weight: 600;
 }
 
-/* DataFrame inside expander - prevent overflow */
-[data-testid="stExpander"] [data-testid="stDataFrame"],
-[data-testid="stExpander"] .stDataFrame {
-  max-width: 100% !important;
-  width: 100% !important;
-  overflow-x: auto !important;
-  box-sizing: border-box !important;
-}
+/* /* DataFrame inside expander - prevent overflow */
+*/
+/* [data-testid="stExpander"] [data-testid="stDataFrame"], */
+/* [data-testid="stExpander"] .stDataFrame { */
+/*   max-width: 100% !important; */
+/*   width: 100% !important; */
+/*   overflow-x: auto !important; */
+/*   box-sizing: border-box !important; */
+/* } */
 
 [data-testid="stExpander"] [data-testid="stDataFrame"]>div,
 [data-testid="stExpander"] .stDataFrame>div {
