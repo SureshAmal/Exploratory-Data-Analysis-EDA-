@@ -1,10 +1,40 @@
 /* Purposeful Motion (respect reduced motion) */
 @media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition: none !important; }
+  * {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
 }
 
-.fade-in { animation: fadeIn var(--dur-base) var(--ease-enter) both; }
-@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.fade-in {
+  animation: fadeIn var(--dur-base) var(--ease-enter) both;
+}
 
-.slide-up { animation: slideUp var(--dur-base) var(--ease-enter) both; }
-@keyframes slideUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp var(--dur-base) var(--ease-enter) both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

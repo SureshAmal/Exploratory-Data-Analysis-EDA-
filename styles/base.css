@@ -1,82 +1,171 @@
 /* Base / Reset / Typography */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:wght@500;600;700&display=swap');
 
-html, body, .stApp, [data-testid="stAppViewContainer"] {
-  background: #ffffff !important; /* Pure white background for brighter canvas */
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"] {
+  background: #ffffff !important;
+  /* Pure white background for brighter canvas */
   min-height: 100vh;
   color: var(--color-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
-* { box-sizing: border-box; }
-body { font-size: var(--fs-base); line-height: var(--line-base); }
+* {
+  box-sizing: border-box;
+}
 
-h1, h2, h3, h4 { font-family: var(--font-serif); font-weight:600; letter-spacing:.5px; }
-h1 { font-size: var(--fs-xxl); line-height: var(--line-tight); }
-h2 { font-size: var(--fs-xl); margin-top: var(--space-6); margin-bottom: var(--space-3); }
-h3 { font-size: var(--fs-lg); margin-top: var(--space-5); margin-bottom: var(--space-2); }
-h4 { font-size: var(--fs-md); margin-top: var(--space-4); margin-bottom: var(--space-2); }
+body {
+  font-size: var(--fs-base);
+  line-height: var(--line-base);
+}
 
-p, li, span, label { font-family: var(--font-sans); }
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+  line-height: var(--line-tight);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+h4 {
+  font-size: var(--fs-md);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+p,
+li,
+span,
+label {
+  font-family: var(--font-sans);
+}
 
 /* Focus visibility */
-:focus { outline: none; }
-:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
 
 /* Scrollbar Removal for Comfortable View */
-html, body, .stApp, [data-testid="stAppViewContainer"] {
-  scrollbar-width: none; /* Firefox */
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"] {
+  scrollbar-width: none;
+  /* Firefox */
 }
-html::-webkit-scrollbar, body::-webkit-scrollbar, .stApp::-webkit-scrollbar { display: none; }
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.stApp::-webkit-scrollbar {
+  display: none;
+}
+
 /* Hide scrollbars in all nested divs */
-div::-webkit-scrollbar { display: none; }
-div { scrollbar-width: none; }
+div::-webkit-scrollbar {
+  display: none;
+}
+
+div {
+  scrollbar-width: none;
+}
 
 /* Utility spacing classes */
-.mt-0 { margin-top:0 !important; }
-.mb-0 { margin-bottom:0 !important; }
-.mb-2 { margin-bottom: var(--space-2) !important; }
-.mb-3 { margin-bottom: var(--space-3) !important; }
-.mb-4 { margin-bottom: var(--space-4) !important; }
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-2 {
+  margin-bottom: var(--space-2) !important;
+}
+
+.mb-3 {
+  margin-bottom: var(--space-3) !important;
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4) !important;
+}
 
 /* Container adjustments */
-.main .block-container { padding-top: var(--space-6); padding-bottom: var(--space-6); max-width: 100%; overflow: visible !important; }
+.main .block-container {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+  max-width: 100%;
+  overflow: visible !important;
+}
 
 /* Prevent overflow - all containers should be visible, not scrollable */
-.element-container, [data-testid="column"], [data-testid="stVerticalBlock"] {
+.element-container,
+[data-testid="column"],
+[data-testid="stVerticalBlock"] {
   max-width: 100%;
   overflow: visible !important;
 }
 
 /* All stMarkdown containers should be non-scrollable */
-[data-testid="stMarkdown"], 
+[data-testid="stMarkdown"],
 [data-testid="stMarkdownContainer"],
 .stMarkdown {
   overflow: visible !important;
 }
 
 /* DataFrame global settings - allow horizontal scroll to show all columns */
-[data-testid="stDataFrame"], .stDataFrame {
+[data-testid="stDataFrame"],
+.stDataFrame {
   max-width: 100% !important;
   overflow-x: auto !important;
   overflow-y: visible !important;
 }
 
-[data-testid="stDataFrame"] > div, .stDataFrame > div {
+[data-testid="stDataFrame"]>div,
+.stDataFrame>div {
   max-width: none !important;
   overflow-x: auto !important;
   overflow-y: visible !important;
 }
-  overflow-x: visible !important;
-  overflow-y: visible !important;
+
+overflow-x: visible !important;
+overflow-y: visible !important;
 }
 
-[data-testid="stDataFrame"] > div, .stDataFrame > div {
+[data-testid="stDataFrame"]>div,
+.stDataFrame>div {
   max-width: 100% !important;
   overflow-x: visible !important;
   overflow-y: visible !important;
 }
 
 /* Text muted */
-.text-muted { color: var(--color-text-muted); }
+.text-muted {
+  color: var(--color-text-muted);
+}
